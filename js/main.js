@@ -593,15 +593,19 @@
 
 //antes-despues
 const imageContainer = document.querySelector('.image-container');
-const slider = document.querySelector('.slider');
+  const slider = document.querySelector('.slider');
 
-if (slider && imageContainer) {
-  slider.addEventListener('input', (e) => {
-    imageContainer.style.setProperty('--position', `${e.target.value}%`);
-  });
-} else {
-  console.warn('No se encontró .slider o .image-container');
-}
+  console.log('container:', imageContainer);  //  para depurar
+  console.log('slider:', slider);             //  para depurar
+
+  if (slider && imageContainer) {
+    slider.addEventListener('input', (e) => {
+      imageContainer.style.setProperty('--position', `${e.target.value}%`);
+      console.log('position:', e.target.value);  //  para ver si se dispara
+    });
+  } else {
+    console.warn('No se encontró .slider o .image-container');
+  }
 
 //mapa
 
