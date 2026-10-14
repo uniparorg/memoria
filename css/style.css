@@ -8624,21 +8624,25 @@ html .ui-button.ui-state-disabled:active {
 
 
 
-..contenedor-antes {
+.contenedor-antes {
   display: grid;
   place-content: center;
-  position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  --position: 50%;
+  width: 100%;
+  /* ❌ NO pongas --position aquí */
+  /* ❌ NO pongas position: relative aquí */
 }
 
 .image-container {
-  position: relative;
-  max-width: 800px;
-  aspect-ratio: 4 / 3; /* o 16/9, o elimínalo y usa height */
-  margin: 0 auto;
+  position: relative;        /* ✅ referencia para los absolute */
+  --position: 50%;           /* ✅ aquí vive la variable */
   width: 100%;
+  max-width: 800px;          /* ✅ MISMO ancho que el hero */
+  aspect-ratio: 4 / 3;       /* ajusta a tu gusto */
+  margin: 0 auto;            /* ✅ centrado igual que el texto */
+  overflow: hidden;
+  border-radius: 1rem;
 }
 
 .slider-image {
@@ -8646,6 +8650,7 @@ html .ui-button.ui-state-disabled:active {
   height: 100%;
   object-fit: cover;
   object-position: left;
+  display: block;
 }
 
 .image-before {
@@ -8655,38 +8660,45 @@ html .ui-button.ui-state-disabled:active {
   filter: grayscale(100%);
 }
 
-.slider-antes {
+.image-after {
+  /* la de después se queda quieta de fondo */
+  position: absolute;
+  inset: 0;
+}
+
+.slider {
   position: absolute;
   inset: 0;
   cursor: pointer;
   opacity: 0;
-  /* for Firefox */
   width: 100%;
   height: 100%;
+  z-index: 3;              /* ✅ por encima para recibir el clic */
+  margin: 0;
 }
 
-.slider-antes:focus-visible ~ .slider-button {
+.slider:focus-visible ~ .slider-button {
   outline: 5px solid black;
   outline-offset: 3px;
 }
 
 .slider-line {
   position: absolute;
-  inset: 0;
-  width: 0.2rem;
-  height: 100%;
+  top: 0;
+  bottom: 0;
+  width: .2rem;
   background-color: #fff;
-  /* z-index: 10; */
   left: var(--position);
   transform: translateX(-50%);
   pointer-events: none;
+  z-index: 2;
 }
 
 .slider-button {
   position: absolute;
   background-color: #fff;
   color: black;
-  padding: 0.5rem;
+  padding: .5rem;
   border-radius: 100vw;
   display: grid;
   place-items: center;
@@ -8694,9 +8706,10 @@ html .ui-button.ui-state-disabled:active {
   left: var(--position);
   transform: translate(-50%, -50%);
   pointer-events: none;
-  /* z-index: 100; */
-  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, 0.5);
+  z-index: 2;
+  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
+
 
 /**mapa**/
 
