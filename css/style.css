@@ -5305,7 +5305,7 @@ label {
 
 .cs_footer.cs_style_1 {
   padding-top: 1px;
-  margin-top: 134px;
+ /* margin-top: 134px;*/
 }
 .cs_footer.cs_style_1.cs_type_1 {
   margin-top: 0;
@@ -8892,7 +8892,7 @@ html .ui-button.ui-state-disabled:active {
 
   .BornHS__Modal__Content2 {
     border-radius: 5px;
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.22);
+    /*box-shadow: 0 0 24px rgba(0, 0, 0, 0.22);*/
     color: #fff;
     opacity: 0;
     position: absolute;
