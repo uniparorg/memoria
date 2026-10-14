@@ -594,7 +594,7 @@
 
 //
 const container = document.querySelector('.contenedor-antes');
-document.querySelector('.slider').addEventListener('input', (e) => {
+document.querySelector('.slider-antes').addEventListener('input', (e) => {
   container.style.setProperty('--position', `${e.target.value}%`);
 })
 
