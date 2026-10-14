@@ -591,14 +591,17 @@
 
 
 
-
-// Selecciona el input correcto (.slider) y actualiza --position sobre .image-container
+//antes-despues
 const imageContainer = document.querySelector('.image-container');
 const slider = document.querySelector('.slider');
 
-slider.addEventListener('input', (e) => {
-  imageContainer.style.setProperty('--position', `${e.target.value}%`);
-});
+if (slider && imageContainer) {
+  slider.addEventListener('input', (e) => {
+    imageContainer.style.setProperty('--position', `${e.target.value}%`);
+  });
+} else {
+  console.warn('No se encontró .slider o .image-container');
+}
 
 //mapa
 
