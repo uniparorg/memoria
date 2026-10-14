@@ -9108,21 +9108,21 @@ html .ui-button.ui-state-disabled:active {
 
 /**MI HERO*/
 
-* {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "PT Sans", sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         /* --- ESTILOS DE LA SECCIÓN HERO --- */
         .hero-section {
             position: relative;
             width: 100%;
-            min-height: 100vh;
+            min-height: 100vh; /* Ocupa toda la altura en escritorio */
             display: flex;
             align-items: center;
-            /*background-color: #f7f5f0; /* Fondo crema */
+            background-color: #f7f5f0;
             overflow: hidden;
         }
 
@@ -9131,7 +9131,7 @@ html .ui-button.ui-state-disabled:active {
             position: absolute;
             top: 0;
             right: 0;
-            width: 50%; /* La imagen ocupa EXACTAMENTE la mitad derecha */
+            width: 50%; 
             height: 100%;
             z-index: 1;
         }
@@ -9141,7 +9141,6 @@ html .ui-button.ui-state-disabled:active {
             height: 100%;
             object-fit: cover; 
             object-position: center;
-            /* Bordes redondeados en la esquina izquierda de la imagen */
             border-top-left-radius: 40px;
             border-bottom-left-radius: 40px;
         }
@@ -9150,8 +9149,7 @@ html .ui-button.ui-state-disabled:active {
         .hero-content {
             position: relative;
             z-index: 2; 
-            width: 50%; /* El texto ocupa EXACTAMENTE la mitad izquierda */
-            /* Añadimos un padding derecho grande para separarlo de la imagen */
+            width: 50%; 
             padding: 4rem 6rem 4rem 4rem; 
             display: flex;
             flex-direction: column;
@@ -9163,7 +9161,7 @@ html .ui-button.ui-state-disabled:active {
         .hero-subtitle {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #6b8e23; /* Verde oliva */
+            color: #6b8e23; 
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 1rem;
@@ -9173,17 +9171,16 @@ html .ui-button.ui-state-disabled:active {
             font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.1;
-            color: #3e2723; /* Marrón oscuro */
+            color: #3e2723; 
             margin-bottom: 1.5rem;
-            /* Evita que palabras largas se salgan del contenedor */
             word-wrap: break-word; 
         }
 
         .hero-description {
             font-size: 1.1rem;
             line-height: 1.6;
-            
-            max-width: 100%; /* Asegura que no se salga del padding */
+            color: #555;
+            max-width: 100%; 
         }
 
         /* Punto decorativo */
@@ -9207,12 +9204,11 @@ html .ui-button.ui-state-disabled:active {
 
         /* --- RESPONSIVE (MÓVILES Y TABLETS) --- */
         @media (max-width: 1024px) {
-            /* Ajuste para tablets */
             .hero-title {
                 font-size: 2.8rem;
             }
             .hero-content {
-                padding: 3rem 3rem 3rem 3rem; /* Menos padding en pantallas medianas */
+                padding: 3rem 3rem 3rem 3rem; 
             }
         }
 
@@ -9220,6 +9216,9 @@ html .ui-button.ui-state-disabled:active {
             .hero-section {
                 flex-direction: column;
                 justify-content: center;
+                /* 🔥 AQUÍ ESTÁ EL CAMBIO CLAVE 🔥 */
+                min-height: 70vh; /* Reducimos la altura al 70% de la pantalla en móvil */
+                padding: 4rem 0; /* Añadimos espacio arriba y abajo para que no quede apretado */
             }
 
             /* La imagen se vuelve fondo completo */
@@ -9241,14 +9240,14 @@ html .ui-button.ui-state-disabled:active {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background: rgba(0, 0, 0, 0.65); /* Fondo oscuro uniforme */
+                background: rgba(0, 0, 0, 0.65); 
             }
 
             /* El texto se superpone a la imagen y se centra */
             .hero-content {
                 width: 100%;
                 height: 100%;
-                padding: 2rem 1.5rem;
+                padding: 1rem 1.5rem; /* Reducimos un poco el padding interno */
                 color: #ffffff; 
                 text-align: center;
                 align-items: center; 
@@ -9261,7 +9260,7 @@ html .ui-button.ui-state-disabled:active {
             }
 
             .hero-description {
-                
+                color: #f0f0f0; 
                 font-size: 1rem;
             }
 
