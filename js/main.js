@@ -592,13 +592,13 @@
 
 
 
-//
-const container = document.querySelector('.contenedor-antes');
-document.querySelector('.slider-antes').addEventListener('input', (e) => {
-  container.style.setProperty('--position', `${e.target.value}%`);
-})
+// Selecciona el input correcto (.slider) y actualiza --position sobre .image-container
+const imageContainer = document.querySelector('.image-container');
+const slider = document.querySelector('.slider');
 
-//
+slider.addEventListener('input', (e) => {
+  imageContainer.style.setProperty('--position', `${e.target.value}%`);
+});
 
 //mapa
 
