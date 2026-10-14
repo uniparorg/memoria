@@ -61,6 +61,7 @@
   --body-color: #555;
   --accent-color: #5c6220;
   --dark-blue-color: #b91e14;
+  --accent-limon-color: #ccbd66;
   --gray-color: #f4f3ef;
   --border-color: #d9d9d9;
   --heading-font: "Encode Sans Condensed", serif;
@@ -2028,6 +2029,9 @@ hr {
 
 .cs_accent_color {
   color: var(--accent-color);
+}
+.cs_accent_limon_color {
+  color: var(--accent-limon-color);
 }
 
 .cs_secondary_color {
@@ -8724,7 +8728,7 @@ html .ui-button.ui-state-disabled:active {
         text-transform: uppercase;
       }
       p {
-        font-size: 13px;
+        
         margin: 0;
         padding: 0;
       }
@@ -8907,7 +8911,6 @@ html .ui-button.ui-state-disabled:active {
         text-transform: uppercase;
       }
       p {
-        font-size: 13px;
         margin: 0;
         padding: 0;
       }
@@ -9118,7 +9121,7 @@ html .ui-button.ui-state-disabled:active {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background-color: #f7f5f0; /* Fondo crema */
+            /*background-color: #f7f5f0; /* Fondo crema */
             overflow: hidden;
         }
 
@@ -9178,7 +9181,7 @@ html .ui-button.ui-state-disabled:active {
         .hero-description {
             font-size: 1.1rem;
             line-height: 1.6;
-            color: #555;
+            
             max-width: 100%; /* Asegura que no se salga del padding */
         }
 
