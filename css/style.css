@@ -9112,7 +9112,7 @@ html .ui-button.ui-state-disabled:active {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
         }
 
         /* --- ESTILOS DE LA SECCIÓN HERO --- */
@@ -9179,7 +9179,7 @@ html .ui-button.ui-state-disabled:active {
         .hero-description {
             font-size: 1.1rem;
             line-height: 1.6;
-            color: #555;
+            
             max-width: 100%; 
         }
 
@@ -9216,7 +9216,7 @@ html .ui-button.ui-state-disabled:active {
             .hero-section {
                 flex-direction: column;
                 justify-content: center;
-                /* 🔥 AQUÍ ESTÁ EL CAMBIO CLAVE 🔥 */
+                /*  AQUÍ ESTÁ EL CAMBIO CLAVE  */
                 min-height: 70vh; /* Reducimos la altura al 70% de la pantalla en móvil */
                 padding: 4rem 0; /* Añadimos espacio arriba y abajo para que no quede apretado */
             }
@@ -9260,7 +9260,7 @@ html .ui-button.ui-state-disabled:active {
             }
 
             .hero-description {
-                color: #f0f0f0; 
+                
                 font-size: 1rem;
             }
 
