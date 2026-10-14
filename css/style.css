@@ -8887,17 +8887,37 @@ html .ui-button.ui-state-disabled:active {
 
 .BornHS__Wrapper2 {
   position: relative;
+  display: flex;             /* AÑADIDO: Para centrar */
+  justify-content: center;   /* AÑADIDO: Centra horizontalmente */
+  align-items: center;       /* AÑADIDO: Centra verticalmente */
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;         /* Ajusta esto si quieres que el árbol sea más grande o pequeño */
+
+  figure {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
 
   .BornHS__Close2 {
     display: none;
   }
+  
   .Content__Wrapper2 {
     position: relative;
   }
 
   .BornHS__Modal__Content2 {
     border-radius: 5px;
-    /*box-shadow: 0 0 24px rgba(0, 0, 0, 0.22);*/
     color: #fff;
     opacity: 0;
     position: absolute;
@@ -8905,11 +8925,25 @@ html .ui-button.ui-state-disabled:active {
     visibility: hidden;
     width: 360px;
     z-index: 4;
+    
+    /* --- MODIFICADO: Pop-up Todo Verde --- */
     .Content__Wrapper2 {
       padding: 20px;
+      background-color: #5c6220;      /* Fondo Verde */
+      color: #ffffff;                 /* Texto Blanco */
+      
+      /* Borde hacia afuera */
+      border: 3px solid #4a4f1a;      /* Borde Verde Oscuro */
+      
+      /* Desplazamiento ligero y sombra sólida desplazada */
+      transform: translate(10px, 10px); 
+      box-shadow: -8px 8px 0px #4a4f1a; 
+
       .BornHS__Title2 {
         font-size: 16px;
         text-transform: uppercase;
+        color: #ffffff;               /* Título Blanco */
+        margin-top: 0;
       }
       p {
         margin: 0;
@@ -8926,6 +8960,7 @@ html .ui-button.ui-state-disabled:active {
     text-indent: -9999px;
     width: 0;
     z-index: -1;
+    
     + .BornHS__Label2 {
       background: #b91e14;
       border-radius: 50%;
@@ -8935,10 +8970,12 @@ html .ui-button.ui-state-disabled:active {
       transition: all 300ms ease;
       width: 20px;
       z-index: 2;
+      
       @media (min-width: 768px) {
         height: 30px;
         width: 30px;
       }
+      
       &:before,
       &:after {
         background: #fff;
@@ -8960,6 +8997,7 @@ html .ui-button.ui-state-disabled:active {
         width: 2px;
       }
     }
+    
     ~ .BornHS__Overlay2 {
       display: none;
       height: 100%;
@@ -8969,6 +9007,7 @@ html .ui-button.ui-state-disabled:active {
       top: 0;
       z-index: 3;
     }
+    
     &:checked {
       + .BornHS__Label2 {
         transform: rotate(45deg);
@@ -8982,6 +9021,7 @@ html .ui-button.ui-state-disabled:active {
       }
     }
   }
+  
   &.BornHS__Blur2 {
     figure {
       -webkit-filter: blur(2px);
@@ -9064,7 +9104,6 @@ html .ui-button.ui-state-disabled:active {
     }
   }
 }
-
 
 
 
