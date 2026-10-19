@@ -8907,7 +8907,7 @@ html .ui-button.ui-state-disabled:active {
 
   figure {
     margin: 0;
-    padding: 0;
+    padding: 21px;
     width: 100%;
     display: flex;
     justify-content: center;
