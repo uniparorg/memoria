@@ -8929,7 +8929,7 @@ html .ui-button.ui-state-disabled:active {
 
   .BornHS__Modal__Content2 {
     border-radius: 5px;
-    color: #fff;
+    color: #E2D37A;
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease-in-out;
@@ -8941,7 +8941,7 @@ html .ui-button.ui-state-disabled:active {
     .Content__Wrapper2 {
       padding: 20px;
       background-color: #5c6220;      /* Fondo Verde */
-      color: #ffffff;                 /* Texto Blanco */
+      color: #E2D37A;                 /* Texto Blanco */
       
       /* Borde hacia afuera */
       border: 3px solid #4a4f1a;      /* Borde Verde Oscuro */
@@ -8953,7 +8953,7 @@ html .ui-button.ui-state-disabled:active {
       .BornHS__Title2 {
         font-size: 16px;
         text-transform: uppercase;
-        color: #ffffff;               /* Título Blanco */
+        color: #E2D37A;               /* Título Blanco */
         margin-top: 0;
       }
       p {
